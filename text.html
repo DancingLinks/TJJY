@@ -30,6 +30,18 @@
 		@font-face {
 			font-family: 'my-font';
 			src: url('./assets/font.ttf');
+		}		
+		@font-face {
+			font-family: 'my-font1';
+			src: url('./assets/STFangsong.ttf');
+		}
+		@font-face {
+			font-family: 'my-font2';
+			src: url('./assets/STKAITI.TTF');
+		}
+		@font-face {
+			font-family: 'my-font3';
+			src: url('./assets/STXihei.TTF');
 		}
 	</style>
 </head>
@@ -100,6 +112,8 @@
 			'追逐梦想的，同路人']
 		var pick = items[Math.floor(Math.random() * items.length)];
 		var text = pick.includes('，') ? pick.split('，').join('<br/>') : pick
+		var fonts = ['my-font','my-font1','my-font2','my-font3']
+		text = '<p style="font-family: '+fonts[Math.floor(Math.random() * fonts.length)]+'">'+text+'</p>'
 		document.getElementById("text").innerHTML = text
 	</script>
 </body>
