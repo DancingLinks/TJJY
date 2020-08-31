@@ -25,22 +25,36 @@
 			letter-spacing: 10px;
 			/* background-color:bisque; */
 			writing-mode: vertical-lr;
+			-webkit-writing-mode: vertical-lr;
+    -ms-writing-mode: lr-tb;
 		}
 
 		@font-face {
 			font-family: 'my-font';
 			src: url('./assets/font.ttf');
-		}		
+		}
 		@font-face {
 			font-family: 'my-font1';
-			src: url('./assets/STFangsong.ttf');
+			src: url('./assets/STXingkai.ttf');
 		}
 		@font-face {
 			font-family: 'my-font2';
-			src: url('./assets/STKAITI.TTF');
+			src: url('./assets/STXinwei.ttf');
 		}
 		@font-face {
 			font-family: 'my-font3';
+			src: url('./assets/STFangsong.ttf');
+		}
+		@font-face {
+			font-family: 'my-font4';
+			src: url('./assets/STLiti.TTF');
+		}
+		@font-face {
+			font-family: 'my-font5';
+			src: url('./assets/STKAITI.TTF');
+		}
+		@font-face {
+			font-family: 'my-font6';
 			src: url('./assets/STXihei.TTF');
 		}
 	</style>
@@ -51,7 +65,7 @@
 		<h3 id='text'>百十同济，年交通乘风破浪的路人大鹏一日起扶摇直上九万里顶天立地规划纵横睥睨下后入海行者极目远眺创建未来扬帆启航往开遇你列车今出发强国脚踏实前之子明家栋梁聚势锐变展翅翱翔好！梦想从这飞为我铺此刻成真智能领多都可以到达在便是晴披荆斩棘白龙马劈波奠基学无止境锲而不舍拓亲~拍了青春方拼搏赛场燃烧吧嘉世界本没有们才数载生情思合融艺健君自息坤物：心、舟共携手科军沿探索辉煌系牵因所用慧汇向于中流击水遏与祖教争做王牌知至善指点江山栉沐雨引最靓铸院魂追逐<br />交通启航</h3>
 	</div>
 
-	<script>
+	<script type="text/javascript">
 		var items = ['百十同济，百年交通',
 			'乘风破浪的，同路人',
 			'大鹏一日同风起，扶摇直上九万里',
@@ -111,8 +125,8 @@
 			'做同路人，铸交院魂',
 			'追逐梦想的，同路人']
 		var pick = items[Math.floor(Math.random() * items.length)];
-		var text = pick.includes('，') ? pick.split('，').join('<br/>') : pick
-		var fonts = ['my-font','my-font1','my-font2','my-font3']
+		var text = pick.includes('，') ? pick.split('，').reverse().join('<br/>') : pick
+		var fonts = ['my-font','my-font1','my-font2','my-font3','my-font4','my-font5']
 		text = '<p style="font-family: '+fonts[Math.floor(Math.random() * fonts.length)]+'">'+text+'</p>'
 		document.getElementById("text").innerHTML = text
 	</script>
